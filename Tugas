@@ -1,0 +1,14 @@
+public class MyConnection  {
+    Connection con_1301204130;
+    public MyConnection() throws SQLExeption{
+        try{
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            con_1301204130 = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbtest", "root", "");
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    } 
+    public Connection getConnection(){
+        return con_1301204130
+    }
